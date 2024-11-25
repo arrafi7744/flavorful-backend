@@ -1,0 +1,1782 @@
+{
+	"info": {
+		"_postman_id": "88bdc45c-2e1e-408d-930b-e02929b4592e",
+		"name": "Men'sShelf",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31060258"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"mushfiq@gmail.com\",\r\n    \"password\": \"1234567\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/src",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"src"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users Using _id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/src/byId/66e048909920072369d22db4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"src",
+								"byId",
+								"66e048909920072369d22db4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users (Non Deleted)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/src/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"src",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customers Using _id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/customer/src/byId/66e048909920072369d22db4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"customer",
+								"src",
+								"byId",
+								"66e048909920072369d22db4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/customer/src",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"customer",
+								"src"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customers (Non-Deleted)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/customer/src/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"customer",
+								"src",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove a Single User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/del/66e048909920072369d22db4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"del",
+								"66e048909920072369d22db4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Password of User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"1122334455\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/password/upt/66e048909920072369d22db4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"password",
+								"upt",
+								"66e048909920072369d22db4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Info Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userEmail\": \"mushfiqurRahman@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/upt/66e048909920072369d22db4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"upt",
+								"66e048909920072369d22db4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get All products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/products/src",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"src"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Products (Non-Deleted)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/products/src/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"src",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Product Using _ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/products/src/byId/66c87595de49b7703e14b553",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"src",
+								"byId",
+								"66c87595de49b7703e14b553"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Product Using Category ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/products/src/category/66c87595de49b7703e14b553",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"src",
+								"category",
+								"66c87595de49b7703e14b553"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Single Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/products/del/66c87595de49b7703e14b553",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"del",
+								"66c87595de49b7703e14b553"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all deleted product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/products/deleted/src",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"deleted",
+								"src"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Make Product Active",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/products/actv/66c87595de49b7703e14b553",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"actv",
+								"66c87595de49b7703e14b553"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update the Product Info",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"buyingPrice\": 40,\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/products/upt/66c87595de49b7703e14b553",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"upt",
+								"66c87595de49b7703e14b553"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\": \"Gucci Shoes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/products/crt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"crt"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CategoryName\" : \"Vape\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/categories/crt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"crt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Categories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/categories/src",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"src"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/categories/src/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"src",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove a Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/categories/del/byId/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"del",
+								"byId",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stocks",
+			"item": [
+				{
+					"name": "Create Stocks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"66ed870edae1ef804580e7ab\",\r\n    \"stockQTY\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/stocks/crt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"stocks",
+								"crt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Stocks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/stocks/src",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"stocks",
+								"src"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Stocks (Also Deleted Ones)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/stocks/src/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"stocks",
+								"src",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Stock Outs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/stocks/stkouts/src/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"stocks",
+								"stkouts",
+								"src",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove a Single Stock",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/stocks/del/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"stocks",
+								"del",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Increase Stock By 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/stocks/upt-incr/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"stocks",
+								"upt-incr",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Decrease Stock By 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/stocks/upt-decr/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"stocks",
+								"upt-decr",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Stock",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stockQTY\" : 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/stocks/upt/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"stocks",
+								"upt",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rating and Review",
+			"item": [
+				{
+					"name": "Create Review Rating",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"66ed870edae1ef804580e7ab\",\r\n    \"userFullName\" : \"Mahisur Rahman\",\r\n    \"productId\": \"66ed870edae1ef804580e7ab\",\r\n    \"productName\" : \"Gucci Shoes\",\r\n    \"rating\": \"3\",\r\n    \"review\": \"Very Nice\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/ratings/crt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"ratings",
+								"crt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Reviews and Ratings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/ratings/src",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"ratings",
+								"src"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Reviews and Ratings (Deleted also)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/ratings/src/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"ratings",
+								"src",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Reviews and Rating",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/ratings/src/byId/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"ratings",
+								"src",
+								"byId",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Reviews and Rating By User Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/ratings/src/byUser/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"ratings",
+								"src",
+								"byUser",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Single Reviews Ratings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/ratings/del/byId/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"ratings",
+								"del",
+								"byId",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete All Reviews Ratings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/ratings/del/byId/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"ratings",
+								"del",
+								"byId",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update All Reviews Ratings",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"reviews\": \"Very Very Good\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/ratings/upt/byId/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"ratings",
+								"upt",
+								"byId",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sales",
+			"item": [
+				{
+					"name": "Create Sales",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"66ed870edae1ef804580e7ab\",\r\n    \"buyingPrice\" : 24,\r\n    \"sellingPrice\": 30,\r\n    \"finalPrice\": 28,\r\n    \"proft\": 4,\r\n    \"loss\": 0,\r\n    \"qtySold\": 1,\r\n    \"discount\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/sales/crt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"sales",
+								"crt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Sales",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/sales/src",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"sales",
+								"src"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Sales (Deleted also)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/ratings/src/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"ratings",
+								"src",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Sales",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/sales/src/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"sales",
+								"src",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Single Sales",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/sales/del/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"sales",
+								"del",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Create Cart IItems",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"userId\": \"66ed870edae1ef804580e7ab\",\r\n          \"productId\": \"66ed870edae1ef804580e7ab\",\r\n          \"customerName\": \"Mahisur Rahman\",\r\n          \"productName\": \"Gucci Shoes\",\r\n          \"productImage\": \"\",\r\n          \"productPrice\": 200,\r\n          \"totalPrice\": 250,\r\n          \"quantity\": 5\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/carts/crt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"carts",
+								"crt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Cart Item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/cart/src/byId/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"cart",
+								"src",
+								"byId",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Carts (Also Deleted)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/carts/src/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"carts",
+								"src",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cart Items By User Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/carts/src/byUser/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"carts",
+								"src",
+								"byUser",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Increate Cart Item Qty by 1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/carts/qty/incr/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"carts",
+								"qty",
+								"incr",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Single Cart Item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/carts/del/byId/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"carts",
+								"del",
+								"byId",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Decrease Cart Item Qty by 1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/carts/qty/decr/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"carts",
+								"qty",
+								"decr",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Single Cart Item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/carts/remove/byId/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"carts",
+								"remove",
+								"byId",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Discounts",
+			"item": [
+				{
+					"name": "Create Discounts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"66ed870edae1ef804580e7ab\",\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/discounts/crt/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"discounts",
+								"crt",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Discounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/discounts/all/src",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"discounts",
+								"all",
+								"src"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Discounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/discounts/src/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"discounts",
+								"src",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Single Discounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/discounts/del/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"discounts",
+								"del",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Single Discount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"66ed870edae1ef804580e7ab\",\r\n    \"discount\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/discounts/upt/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"discounts",
+								"upt",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delivery Charges",
+			"item": [
+				{
+					"name": "Create Delivery Charge",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"deliveryFee\": 200,\r\n                \"deliveryShift\": \"Night\",\r\n                \"deliveryShiftNumber\": 228\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/delivery/crt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"delivery",
+								"crt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Delivery Charges",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/delivery/src/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"delivery",
+								"src",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Delivery Charge",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/delivery/src/byId/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"delivery",
+								"src",
+								"byId",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Single Delivery Charge",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/delivery/del/byId/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"delivery",
+								"del",
+								"byId",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tax",
+			"item": [
+				{
+					"name": "Create Tax",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"taxNumber\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/tax/crt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"tax",
+								"crt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Tax",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/tax/src",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"tax",
+								"src"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tax",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/tax/del/byId/66ed870edae1ef804580e7ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"tax",
+								"del",
+								"byId",
+								"66ed870edae1ef804580e7ab"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

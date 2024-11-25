@@ -1,0 +1,95 @@
+##########################################
+####         Category Module          ####
+##########################################
+
+## Module code :                1.2
+## Module Name:                 Category 
+## Method:                      Create Category
+## Method Code:                 1.2.1
+## Technical Description:       This API results in creation of a Category by passing the categorie's name, and categorie's code.
+ 
+
+POST http://localhost:8000/api/v1/categories/crt HTTP/1.1
+Content-Type:application/json
+
+{
+    "categoryName": "Long-Sleeve T-shirts",
+    "categoryCode": 2287
+}
+
+## UseCase: To create Categories
+##      Note: 
+##          - This API is already creating Categories, which we will further implement for filtering products.  
+
+
+#########################################################################################################
+
+
+
+
+
+## Module code :                1.2
+## Module Name:                 Category 
+## Method:                      Show All Category
+## Method Code:                 1.2.2
+## Technical Description:       This API results in displaying a single category
+ 
+
+GET http://localhost:8000/api/v1/categories/src HTTP/1.1
+
+
+## UseCase: To showcase all Categories
+##      Note: 
+##            
+
+
+#########################################################################################################
+
+
+
+
+
+
+## Module code :                1.2
+## Module Name:                 Category 
+## Method:                      Show Single Category
+## Method Code:                 1.2.3
+## Technical Description:       This API results in showcasing a single Category
+## Category ID:                 (6635c633e5b5d6e98c2a86ae)
+
+GET http://localhost:8000/api/v1/categories/src/6635c633e5b5d6e98c2a86ae HTTP/1.1
+
+
+## UseCase: To SHOW Single Category
+##      Note: 
+##          - Without a particular categorie's ID, it won't function.   
+
+
+#########################################################################################################
+
+
+
+
+
+## Module code :                1.2
+## Module Name:                 Category 
+## Method:                      Delete a Single Category
+## Method Code:                 1.2.4
+## Technical Description:       This API results in soft Deleting a single Category using the Category Code
+## Category code:               (2247)
+
+POST http://localhost:8000/api/v1/categories/del HTTP/1.1
+Content-Type: application/json
+
+{
+    "categoryCode": 2247
+}
+
+
+## UseCase: To REmove a Single Category
+##      Note: 
+##      Ensure:
+##          - It won't remove with the mongodb id of the category, instead you need to provide the Category Code.  
+
+
+#########################################################################################################

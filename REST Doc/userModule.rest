@@ -1,0 +1,117 @@
+##########################################
+####            User Module           ####
+##########################################
+
+## Module code :                1.4
+## Module Name:                 User 
+## Method:                      Create User
+## Method Code:                 1.4.1
+## Technical Description:       This API results in creation of a User by passing the user's name, email, image.
+ 
+
+POST http://localhost:8000/api/v1/users/crt HTTP/1.1
+Content-Type:application/json
+
+{
+    "userName": "Mushfiqur Rahman",
+    "userEmail": "codeklucifer@gmail.com@gmail.com",
+    "userType": 1,
+    "userPass": "asd123",
+    "userImg": "http://res.cloudinary.com/dwq8fbgmg/image/upload/v1714395956/o5p9dgzqqlrcbmclvuj0.jpg" //Currently it won't work, as upload-image is necessary//
+}
+
+## UseCase: To create Users
+##      Note: 
+##          - For the API Testing, I used the default URL on userImg, but you can upload your image as well. 
+
+
+#########################################################################################################
+
+
+
+
+
+## Module code :                1.4
+## Module Name:                 User 
+## Method:                      Show All Users
+## Method Code:                 1.4.2
+## Technical Description:       This API results in showing all the users
+
+GET http://localhost:8000/api/v1/users/src HTTP/1.1
+
+
+## UseCase: To show all Users
+##      Note: 
+
+
+#########################################################################################################
+
+
+
+
+
+## Module code :                1.4
+## Module Name:                 User 
+## Method:                      Show Single User
+## Method Code:                 1.4.3
+## Technical Description:       This API results showing a Single User with their mongodb Id.
+## User ID:                     (662f9b344b363fc533ec03b7)
+ 
+
+GET http://localhost:8000/api/v1/users/src/662f9b344b363fc533ec03b7 HTTP/1.1
+
+
+## UseCase: To Show a Single User with User Id
+##      Note: 
+##          - Make sure the ID is MongoDB's given Id,
+
+
+#########################################################################################################
+
+
+
+
+
+## Module code :                1.4
+## Module Name:                 User 
+## Method:                      Update Single User Information
+## Method Code:                 1.4.4
+## Technical Description:       This API results updating a Single User details by fetching with their mongodb Id.
+## User ID:                     (662f9b344b363fc533ec03b7)
+ 
+
+POST http://localhost:8000/api/v1/users/upt/662f9b344b363fc533ec03b7 HTTP/1.1
+Content-Type: application/json
+
+{
+    "userName": "Aslam Islam"
+}
+
+## UseCase: To Show a Single User with User Id
+##      Note: 
+##          - Make sure the ID is MongoDB's given Id,
+
+
+#########################################################################################################
+
+
+
+
+
+## Module code :                1.4
+## Module Name:                 User 
+## Method:                      Soft Delete Single User
+## Method Code:                 1.4.5
+## Technical Description:       This API results in soft deleting a Single User's details by fetching with their mongodb Id.
+## User ID:                     (662f9b344b363fc533ec03b7)
+ 
+
+GET http://localhost:8000/api/v1/users/del/662f9b344b363fc533ec03b7 HTTP/1.1
+
+
+## UseCase: To Show a Single User with User Id
+##      Note: 
+##          - Make sure the ID is MongoDB's given Id,
+
+
+#########################################################################################################
